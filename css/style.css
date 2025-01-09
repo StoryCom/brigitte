@@ -1,0 +1,638 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;500;600;700&display=swap');
+/* Général */
+*{
+    margin:0;
+    scroll-behavior: smooth;
+}
+
+:root{
+    --noir:#000;
+    --rouge:#cc3900;
+    --blanc:#fff;
+    --rose:#fbbbcd;
+    --gloria:'Gloria Hallelujah', cursive;
+    --noto:'Noto Sans', sans-serif;
+}
+
+h1,
+.titre1{
+    font-family: var(--gloria);
+    font-size: 45px;
+    font-weight: 100;
+}
+
+h2{
+    font-family: var(--gloria);
+    font-size: 28px; 
+}
+
+h3{
+    font-family: var(--gloria);
+    font-size: 25px;
+}
+
+p{
+    font-family: var(--noto);
+    font-size: 16px;
+}
+
+a{
+    font-family: var(--noto);
+    font-size: 16px;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color:var(--noir);
+}
+
+a:hover{
+    color:var(--rouge);
+}
+
+.container-1440{
+    max-width: 1440px;
+    margin:auto;
+    padding:0 15px;
+}
+
+.btn{
+    border: 1px solid var(--rose);
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.btn:hover{
+    border-color: var(--rouge);
+    background-color: var(--rouge);
+    color:var(--blanc);
+}
+.active{
+    color:var(--rouge);
+}
+/* HEADER */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:15px;
+}
+
+header nav ul{
+    display: flex;
+    gap:24px;
+    list-style: none;
+    font-weight: 600;
+    letter-spacing: 0.2;
+    padding-left: 0;
+}
+
+header img{
+    width:180px;
+    margin:15px 0;
+}
+
+header #social i{
+    color: var(--rouge);
+    font-size: 24px;
+}
+
+#social{
+    display: flex;
+    gap:24px;
+}
+#burger{
+    display: none;
+}
+/* Footer */
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:15px;
+    padding: 40px 15px!important;
+}
+footer img{
+    width:180px;
+    height: auto;
+}
+footer ul{
+    display: flex;
+    gap:24px;
+    list-style: none;
+    font-weight: 600;
+    letter-spacing: 0.2;
+    padding-left: 0;
+}
+
+footer .reseaux i{
+    color: var(--rouge);
+    font-size: 24px;
+}
+
+.reseaux{
+    display: flex;
+    gap:24px;
+}
+#menufooter{
+    text-align: center;
+}
+.copyright{
+    margin-top: 25px;
+}
+/* Homepage */
+/* Section 1 */
+#section1{
+    background-image: url(/img/favicon.png);
+    background-repeat: no-repeat;
+    background-position-x: 101%;
+    background-position-y: 57%;
+    background-size: 48%;
+    padding: 70px 0;
+}
+
+#section1 > div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:80px;
+    align-items: center;
+    margin: 40px auto 80px auto;
+}
+
+#section1 img{
+    width: 80%;
+    justify-self: right;
+}
+#section1 article div{
+    display: flex;
+    align-items: center;
+    gap:12px;
+}
+#section1 article div p{
+    text-transform: uppercase;
+    color:var(--rouge);
+}
+#section1 hr{
+    width:50px;
+    height: 1px;
+    background-color: var(--rouge);
+}
+#section1 article>p{
+    max-width: 66%;
+    margin-top: 24px;
+}
+#section1 .btn{
+    margin-top: 45px;
+}
+
+/* Section 2  */
+#galerie{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+}
+#galerie aside{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:15px;
+    padding:15px;
+}
+#galerie aside img{
+    width:100%;
+    object-fit: cover;
+    height: 400px;
+}
+#ImgGalerie img:nth-child(5){
+    grid-column: 1/3;
+}
+#ImgGalerie img:nth-child(6){
+    grid-column: 3/5;
+}
+#ImgGalerie a{
+    text-decoration: underline;
+    margin-top: -10px;
+}
+#galerie>div{
+    background-color: var(--rose);
+    height: 100%;
+    display: grid;
+}
+#galerie > div > article{
+    max-width: 650px;
+    margin:auto;
+    padding:15px;
+}
+#galerie h2{
+    margin-bottom: 40px;
+}
+#galerie p{
+    margin-bottom: 20px;
+}
+
+/* Section 3 - Oeuvres */
+#oeuvres{
+    margin:80px auto;
+}
+#oeuvres > div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    gap:45px;
+    align-items: center;
+    margin-bottom: 40px;
+    line-height: 1.3;
+}
+#oeuvres > div:nth-child(2){
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+}
+#oeuvres article{
+    text-align: center;
+}
+#oeuvres article img{
+    width:100%;
+    height: 300px;
+    object-fit: cover;
+}
+#oeuvres .btn{
+    margin-top: 0;
+}
+/* Nos artistes */
+#artistes{
+    background-color: #F7F7F7;
+    padding:50px 0;
+}
+#artistes h2{
+    text-align: center;
+    margin-bottom: 40px;
+}
+#artistes .container-1440 > div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:20px;
+}
+#artistes img{
+    width:100%;
+    height:300px;
+    object-fit: cover;;
+}
+
+#artistes article div{
+    display: flex;
+    align-items: center;
+    gap:15px;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+#artistes article p{
+    font-size: 14px;
+}
+
+#artistes article h3{
+    text-align: center;
+}
+#artistes article>div>a:nth-child(1){
+    display: none;
+}
+#socialnetwork i{
+    color: var(--rouge);
+    font-size: 19px;
+}
+/* Section actualités */
+
+#actualites{
+    margin:80px auto;
+}
+#actualites > div:nth-child(1){
+    display: flex;
+    justify-content: space-between;
+    gap:15px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+#actualites img{
+    width:100%;
+    height:460px;
+    object-fit: cover;
+}
+#actualites > div:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+#actualites article p{
+    font-size: 14px;
+}
+.readmore{
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+}
+#actualites h3{
+    font-size: 18px;
+}
+.date{
+    margin: 8px 0;
+}
+/* Contact - Accueil */
+#accueilcontact{
+    background-color: var(--rouge);
+    padding: 80px 0;
+}
+#accueilcontact article{
+    max-width: 690px;
+    margin:auto;
+    padding:0 15px;
+    text-align: center;
+    color:var(--blanc);
+}
+#accueilcontact h2{
+    line-height: 1.3;
+}
+#accueilcontact p{
+    margin:40px 0;
+}
+#accueilcontact .btn{
+    color:var(--blanc);
+}
+#accueilcontact .btn:hover{
+    background-color: var(--blanc);
+    border-color: var(--blanc);
+    color:var(--rouge);
+}
+
+
+/* Fin Homepage */
+
+/* Contact page */
+/* Section 1 */
+#section1-contact{
+    background-image: url(/img/favicon.png);
+    background-repeat: no-repeat;
+    background-position-x: 102%;
+    background-position-y: 27%;
+    background-size: 27%;
+    padding: 70px 0;
+}
+
+#section1-contact > div{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:80px;
+    align-items: center;
+    margin: 40px auto 80px auto;
+}
+ #section1-contact .contactinfo p{
+    font-family: var(--gloria);
+    font-size: 20px;
+ }
+ #section1-contact .contactinfo div{
+    display:grid;
+    grid-template-columns: 20px auto;
+    align-items: baseline;
+    column-gap:12px;
+    margin-bottom: 20px;
+ }
+ #section1-contact .contactinfo p:nth-child(3){
+    grid-column: 2;
+ }
+#section1-contact .contactinfo i{
+    color:var(--rouge);
+    font-size: 20px;
+}
+#section1-contact article{
+    width:70%;
+}
+#section1-contact article > p{
+    margin-bottom: 20px;
+}
+#section1-contact form{
+    display: grid;
+    width: 60%;
+    justify-self: right;
+    font-family: var(--noto);
+}
+::placeholder{
+    font-family: var(--noto);
+    color:#7A7A7A;
+}
+form input, form textarea{
+    padding:8px;
+    margin-bottom: 10px;
+}
+input[type=submit]{
+    background-color: var(--rose);
+    border:none;
+    color:var(--blanc);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+input[type=submit]:hover{
+    transition: all 0.2s ease;
+    background-color: var(--rouge);
+}
+
+/* Page actualités */
+
+
+#section1-actus .titlebackground{
+    background-color: var(--rose);
+    height:400px;
+    display: flex;
+    align-items: center;
+}
+#section1-actus .titlebackground h1{
+    text-align: center;
+}
+#section1-actus #blogtitle{
+    text-align: center;
+    font-family: var(--noto);
+    color:#7A7A7A;
+    font-weight: 400;
+    font-size: 21px;
+    margin:25px 0;
+}
+#section1-actus img{
+    width:100%;
+    height:460px;
+    object-fit: cover;
+}
+#section1-actus > div:nth-child(2) > div{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    row-gap: 40px;
+}
+#section1-actus article p{
+    font-size: 14px;
+}
+#section1-actus .readmore{
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 20px;
+    display: inline-block;
+    color:#605BE5;
+}
+#section1-actus h3{
+    font-size: 18px;
+}
+.date{
+    margin: 8px 0;
+}
+#section1-actus .btn{
+    background-color: #605BE5;
+    border-color: #605BE5;
+    color:var(--blanc);
+    border-radius: 2px;
+    display: block;
+    margin: 50px auto;
+    max-width: 125px;
+    text-align: center;
+}
+#section1-actus .btn:hover{
+    background-color: var(--rouge);
+    border-color: var(--rouge);
+}
+
+
+/* Page - Oeuvres */
+
+#section1-oeuvres h1{
+    margin-bottom: 70px;
+    line-height: 1.3;
+}
+#section1-oeuvres > div{
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap:20px;
+    row-gap: 40px;
+}
+#section1-oeuvres article{
+    text-align: center;
+}
+#section1-oeuvres article img{
+    width:100%;
+    height: 300px!important;
+    object-fit: cover;
+}
+
+/* responsive tablette */
+@media screen and (max-width: 1024px){
+    #burger{
+        display: block;
+        color:var(--rouge);
+        cursor: pointer;
+    }
+    header nav,
+    header #social{
+        display: none;
+    }
+    #section1 > div,
+    #galerie,
+    #actualites > div:nth-child(2){
+        grid-template-columns: 1fr;
+    }
+    #section1 img {
+        width:100%;
+    }
+    #galerie > div > article{
+        padding:80px 15px;
+    }
+    #galerie aside{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #ImgGalerie img:nth-child(6),
+    #ImgGalerie img:nth-child(5){
+        grid-column: auto;
+    }
+    #galerie aside img{
+        height:262px;
+    }
+    #ImgGalerie img:nth-child(1){
+        grid-column: 2;
+        grid-row: 1/3;
+        height:100%;
+    }
+    #ImgGalerie img:nth-child(3){
+        grid-column: 2;
+        height:100%;
+        grid-row: 3/5;
+    }
+    #oeuvres > div:nth-child(2),
+    #artistes .container-1440 > div{
+        grid-template-columns: repeat(2,1fr);
+    }
+    footer{
+        flex-direction: column;
+    }
+
+    /* page contact */
+    #section1-contact > div{
+        grid-template-columns: 1fr;
+    }
+    #section1-contact article,
+    #section1-contact form{
+        width: 100%;
+    }
+    /* Page actus & oeuvres */
+    #section1-actus > div:nth-child(2) > div,
+    #section1-oeuvres > div{
+        grid-template-columns: 1fr 1fr;
+    }
+    #section1-actus > div:nth-child(2) > div article:nth-child(3n + 1),
+    /* #section1-actus > div:nth-child(2) > div article:nth-child(4),
+    #section1-actus > div:nth-child(2) > div article:nth-child(7), */
+    #section1-oeuvres > div article:nth-child(1),
+    #section1-oeuvres > div article:nth-child(4),
+    #section1-oeuvres > div article:nth-child(7){
+        grid-column: 1/3;
+    }
+}
+
+/* Responsive mobile */
+@media screen and (max-width: 767px) {
+    h1,.titre1{
+        font-size: 35px;
+    }
+    #section1 article>p{
+        width:100%;
+    }
+    #galerie aside{
+        grid-template-columns: repeat(1,1fr);
+    }
+ 
+    #ImgGalerie img:nth-child(1),
+    #ImgGalerie img:nth-child(3){
+ 
+        grid-row: auto;
+        grid-column: auto;
+        height:262px;
+  
+    }
+   
+    #oeuvres > div:nth-child(2),
+    #artistes .container-1440 > div{
+        grid-template-columns: repeat(1,1fr);
+    }
+    #oeuvres > div:nth-child(1),
+    #actualites > div:nth-child(1),
+    footer ul{
+        flex-direction: column;
+    }
+     /* Page actus & oeuvres */
+     #section1-actus > div:nth-child(2) > div,
+     #section1-oeuvres > div{
+        grid-template-columns: 1fr;
+    }
+    #section1-actus > div:nth-child(2) > div article:nth-child(1),
+    #section1-actus > div:nth-child(2) > div article:nth-child(4),
+    #section1-actus > div:nth-child(2) > div article:nth-child(7),
+    #section1-oeuvres > div article:nth-child(1),
+    #section1-oeuvres > div article:nth-child(4),
+    #section1-oeuvres > div article:nth-child(7)
+    {
+        grid-column: 1;
+    }
+}
